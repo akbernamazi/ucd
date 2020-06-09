@@ -1,0 +1,25 @@
+{
+  "name": "ucd",
+  "version": "1.0.0",
+  "description": "Service for user details ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akbernamazi/ucd.git"
+  },
+  "author": "Akber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akbernamazi/ucd/issues"
+  },
+  "homepage": "https://github.com/akbernamazi/ucd#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.12"
+  }
+}
