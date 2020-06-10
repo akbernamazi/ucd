@@ -33,9 +33,9 @@ Create a Database name it as "ucd"
 
 Run the following command
 
-'''
+```
 node server.js
-'''
+```
 
 ## Deployment
 
