@@ -32,6 +32,7 @@ Just turn on your mysql server, I used XAMPP activate appache and mysql.
 Create a Database name it as "ucd"
 
 Run the following command
+
 '''
 node server.js
 '''
