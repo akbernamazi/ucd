@@ -50,9 +50,17 @@ exports.remove = (req, res) => {
       where: {
         uid: req.body.uid,
       },
-    }).catch((err) => {
-      res.status(500).send({ message: err.message });
-    });
+    })
+      .then((user) => {
+        if (!user) {
+          res.status(400).send("Failure");
+        } else {
+          res.status(200).send("success");
+        }
+      })
+      .catch((err) => {
+        res.status(500).send({ message: err.message });
+      });
   });
 };
 
