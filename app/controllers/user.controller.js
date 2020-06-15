@@ -44,7 +44,7 @@ exports.remove = (req, res) => {
     },
   }).then((user) => {
     if (!user) {
-      return res.status(404).send({ message: "User Not found." });
+      return res.status(404).send({ message: "Data Not found." });
     }
     User.destroy({
       where: {
@@ -65,16 +65,17 @@ exports.remove = (req, res) => {
 };
 
 exports.details = (req, res) => {
-  // console.log(req.headers["uid"]);
+  // console.log(req.body);
   User.findOne({
     where: {
-      uid: req.headers["uid"],
+      uid: req.body.uid,
     },
   })
     .then((user) => {
       if (!user) {
         return res.status(404).send({ message: "No details found." });
       } else {
+        // console.log(user);
         return res.status(200).send(user);
       }
     })
